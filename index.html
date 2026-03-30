@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat&Chop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+</head>
+<body>
+    <div class="sb cb">
+
+    <!-- Chat Shop Button -->
+    <div class="chatShopCont">
+    <button id="btnNavDrawer" class="btn-base btn-navdrawer" onclick="openDrawer()">
+      <img src="{{media url=wysiwyg/footer/chatBotImgAb.png}}" alt="Chat Shop Button" width="60px" height="60px"/>
+    </button>
+    <article class="safetyAdvisory" id="safetyAdvisory" role="dialog" aria-live="polite" aria-label="Safety advisory">
+    <button class="closeAdvisory" id="closeBubble" aria-label="Close advisory">&times;</button>
+    <p style="font-weight: 600;">Safety Advisory:</p>
+    <p>Enjoy safe and secure transactions through our official channels!</p>
+    </article>
+    </div>
+
+    <!-- Backdrop -->
+    <div id="backdrop" onclick="closeDrawer()"></div>
+
+    <!-- Drawer -->
+    <div id="navdrawer" class="navdrawer">
+      <!-- Close Button -->
+      <button class="btn-x" onclick="closeDrawer()">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.5502 2.52911L2.64811 13.471M13.5502 13.471L2.44922 2.52911"
+            stroke="#EAF6FF"
+            stroke-width="0.923077"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+
+      <!-- Drawer Page Main -->
+      <div id="dp-main" class="flex-container">
+        <!-- Header -->
+        <header class="header-sidenav">
+          <div>
+            <div class="titlebar">
+              <div class="txt-titlebar txt-center">
+                <h3 class="titlebar-title">Chat & Shop</h3>
+                <p class="titlebar-subtitle">Your abz Bestie’s here for you 9am to 6pm daily!</p>
+                <img class="eye_emoji" src="img/eyes_happy.png" alt="">
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- Content -->
+        <div class="sidenav-display-container flex-container">
+          <section class="content-container">
+            <ul>
+              <li>
+                <a id="messenger-link" class="li-contacts" href="https://www.messenger.com/t/abensonappliances" target="_blank">
+                  <img class="icon-bg icon-sm" src="img/Messenger.png" alt="messenger-icon" />
+                  <div class="flex-container">
+                    <p class="li-title txt-w100">Messenger</p>
+                    <p class="li-sub txt-w100">Chat on facebook messenger</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="li-contacts" href="#" target="_blank">
+                  <img id="instagram-icon" class="icon-bg icon-sm" src="img/instagram.png" alt="instagram-icon" />
+                  <div class="flex-container">
+                    <p class="li-title txt-w100">Instagram</p>
+                    <p class="li-sub txt-w100">Chat on instagram</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="li-contacts" href="viber://pa?chatURI=abensonph" target="_blank">
+                  <img class="icon-bg icon-sm" src="img/viber.png" alt="viber-icon" />
+                  <div class="flex-container">
+                    <p class="li-title txt-w100">Viber</p>
+                    <p class="li-sub txt-w100">Chat on viber</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="li-contacts" href="https://wa.me/639178799483" target="_blank">
+                  <img class="icon-bg icon-sm" src="img/whatsapp.png" alt="whatsapp-icon" />
+                  <div class="flex-container nbb">
+                    <p class="li-title txt-w100">WhatsApp</p>
+                    <p class="li-sub txt-w100">Chat on whatsapp</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="content-container">
+            <ul>
+              <li class="li-contacts">
+                <img class="icon-md" src="{{media url=store-chat/mobile.png}}" alt="" />
+                <div class="flex-container">
+                  <p class="li-title">Mobile</p>
+                  <p class="li-subtitle txt-w100">
+                    <span>
+                      <a href="tel:+639088177788"> 09088177788 </a>
+                    </span>
+                    •
+                    <span>
+                      <a href="tel:+639999906141"> 09999906141 </a>
+                    </span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <a class="li-contacts" href="Tel:+63288118811">
+                  <img class="icon-md" src="{{media url=store-chat/hotline.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">Hotline</p>
+                    <p class="li-subtitle txt-w100">(02) 8811-8811</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="btn-base li-contacts" onclick="openDpOverseas()">
+                  <img class="icon-md" src="{{media url=store-chat/overseas_hotline.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">Overseas Hotlines</p>
+                    <p class="li-subtitle txt-w100">Call our toll-free hotline numbers</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="li-contacts" href="mailto:shop@abenson.com">
+                  <img class="icon-md" src="{{media url=store-chat/email.png}}" alt="" />
+                  <div class="flex-container nbb">
+                    <p class="li-title">Email</p>
+                    <p class="li-subtitle txt-w100">shop@abenson.com</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="content-container">
+            <ul>
+              <li>
+                <a class="li-contacts" href="https://www.abenson.com/abensoncare">
+                  <img class="icon-md" src="{{media url=store-chat/help_center.png}}" alt="" />
+                  <div class="flex-container nbb">
+                    <p class="li-title">Help Center</p>
+                    <p class="li-subtitle txt-w100">Have questions? Visit our help center</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <select id="cityList">
+            <option value="">Select City</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Drawer Page Overseas -->
+      <div id="dp-overseas" class="flex-container">
+        <!-- Header -->
+        <header class="header-sidenav">
+          <div>
+            <img class="header-bg" src="{{media url=store-chat/header.png}}" alt="" />
+          </div>
+          <div class="titlebar flex-start">
+            <button class="btn-base btn-back" onclick="closeDpOverseas()">
+              <svg
+                width="12"
+                height="20"
+                viewBox="0 0 12 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.95481 9.0502C2.42897 8.53111 1.58189 8.53657 1.0628 9.06241C0.543709 9.58824 0.549175 10.4353 1.07501 10.9544L9.0481 18.8253C9.57393 19.3444 10.421 19.3389 10.9401 18.8131C11.4592 18.2872 11.4537 17.4401 10.9279 16.921L2.95481 9.0502Z"
+                  fill="white"
+                />
+                <path
+                  d="M2.95209 10.9524C2.42626 11.4715 1.57918 11.466 1.06009 10.9402C0.540996 10.4144 0.546462 9.56727 1.0723 9.04818L9.04801 1.17474C9.57385 0.655649 10.4209 0.661116 10.94 1.18695C11.4591 1.71279 11.4536 2.55987 10.9278 3.07896L2.95209 10.9524Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <div class="txt-titlebar">
+              <h3 class="titlebar-title">Overseas Hotlines</h3>
+              <p class="titlebar-subtitle">8am-8pm (PH Time)</p>
+            </div>
+          </div>
+        </header>
+        <!-- Conetnt -->
+        <div class="sidenav-display-container flex-container">
+          <section class="content-container">
+            <ul>
+              <li>
+                <a class="li-contacts" href="tel:+12137585050">
+                  <img class="icon-md" src="{{media url=store-chat/usa.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">USA</p>
+                    <p class="li-subtitle txt-w100">+1 213 758 5050</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="li-contacts" href="tel:+6531052078">
+                  <img class="icon-md" src="{{media url=store-chat/singapore.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">Singapore</p>
+                    <p class="li-subtitle txt-w100">+65 3105 2078</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="li-contacts" href="tel:+611800575026">
+                  <img class="icon-md" src="{{media url=store-chat/australia.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">Australia</p>
+                    <p class="li-subtitle txt-w100">+61 1800 575 026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a class="li-contacts" href="tel:+9718000120104">
+                  <img class="icon-md" src="{{media url=store-chat/uae.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">UAE</p>
+                    <p class="li-subtitle txt-w100">+971 800 012 0104</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a class="li-contacts" href="tel:+39800725979">
+                  <img class="icon-md" src="{{media url=store-chat/italy.png}}" alt="" />
+                  <div class="flex-container">
+                    <p class="li-title">Italy</p>
+                    <p class="li-subtitle txt-w100">+39 800 725 979</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+<select id="cityList">
+  <option value="">Select City 1</option>
+</select>
+      </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
