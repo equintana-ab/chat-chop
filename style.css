@@ -67,10 +67,8 @@ html:has(.navdrawer.open) {
 }
 
 .sb.cb .icon-sm {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+  width: clamp(45px, 2vw, 55px);
+  height: clamp(45px, 2vw, 55px);
   flex-shrink: 0;
 }
 
@@ -272,6 +270,10 @@ html:has(.navdrawer.open) {
   transform: translateX(0);
   visibility: visible;
   background-color: #3f59d9;
+  background-image: url("img/logo_Z_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
 }
 
 .sb.cb .btn-base {
@@ -292,6 +294,8 @@ html:has(.navdrawer.open) {
   height: auto;
   padding: 24px;
   background-color: #e6ff83;
+  position: relative;
+  overflow: hidden;
 }
 
 .sb.cb .titlebar.flex-start {
@@ -343,8 +347,8 @@ html:has(.navdrawer.open) {
 }
 .eye_emoji {
   position: absolute;
-  right: 0;
-  top: 48px;
+  right: 45px;
+  top: 51px;
   width: clamp(50px, 7vw, 64px);
   height: clamp(49px, 7vw, 60px);
 }
@@ -408,39 +412,31 @@ section.content-container > ul {
 }
 
 .sb.cb .li-contacts img.icon-sm,
-img.icon-md {
-  margin-right: 12px;
+img.icon-md,
+svg.icon-sm {
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
 .sb.cb .icon-bg {
-  padding: 10px;
+  padding-right: 5px;
 }
 
 .sb.cb .li-title {
   margin: 0;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.1px;
   text-align: left;
-  color: #4c525c;
-}
-#instagram-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  flex-shrink: 0;
+  color: var(--Text-Text-Primary, #282727);
 }
 
 .sb.cb .li-subtitle {
   margin: 0;
-  font-size: 12px;
+  font-size: clamp(12px, 2vw, 14px);
   font-weight: 400;
-  line-height: 20px;
-  color: #767676;
+  line-height: 18px;
+  color: var(--Text-Text-Secondary, #646464);
 }
 
 /* Overriders */
@@ -484,7 +480,7 @@ img.icon-md {
     padding: 10px 0px;
   }
   .eye_emoji {
-    top: 37px;
+    top: 43px;
   }
 }
 @media (min-width: 1024px) {
