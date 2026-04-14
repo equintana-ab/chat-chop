@@ -5,11 +5,11 @@
   font-family: var(--font-family, "Poppins");
   scroll-behavior: smooth;
 }
-body {
+/* body {
   margin: 0;
-  padding: 0;
-  /* height: 200vh; */
-}
+  padding: 0; */
+/* height: 200vh; */
+/* } */
 
 :root {
   --Text-Text-Primary: #282727;
@@ -476,8 +476,8 @@ svg.icon-sm {
   display: none;
 }
 /* for ghost hover in iphone  */
-.navdrawer.is-opening .li-contacts:hover,
-.navdrawer.is-opening .li-contacts:focus {
+.navdrawer.is-opening .li-contacts {
+  pointer-events: none !important;
   background-color: transparent !important;
 }
 
