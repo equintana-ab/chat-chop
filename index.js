@@ -19,7 +19,7 @@ function toggleDrawer(isOpen) {
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollY}px`;
     //for ghost hover effect when opening drawer in iphone
-    btnNav.blur();
+
     // drawer.classList.add("is-opening");
     // setTimeout(() => {
     //   drawer.classList.remove("is-opening");
