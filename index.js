@@ -28,6 +28,11 @@ function toggleDrawer(isOpen) {
     document.body.style.position = "";
     document.body.style.top = "";
     window.scrollTo(0, scrollY);
+    /// for ghost hover in iphone after opening the drawer.
+    drawer.style.pointerEvents = "none";
+    setTimeout(() => {
+      drawer.style.pointerEvents = "";
+    }, 400);
   }
 }
 
