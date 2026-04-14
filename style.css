@@ -249,7 +249,7 @@ html:has(.navdrawer.open) {
   z-index: 100000;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  overflow-x: hidden;
+  overflow: hidden;
   visibility: hidden;
 }
 
@@ -460,10 +460,6 @@ svg.icon-sm {
 .sb.cb .content-invisible {
   visibility: hidden;
   pointer-events: none;
-}
-
-.sb.cb #dp-main {
-  display: initial;
 }
 
 .sb.cb #dp-overseas {
