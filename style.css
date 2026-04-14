@@ -58,10 +58,10 @@ html:has(.navdrawer.open) {
 .sb.cb .flex-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.sb.cb .text-content {
   justify-content: center;
 }
-
 .sb.cb .flex-container.gap-sm {
   gap: 4px;
 }
@@ -115,8 +115,6 @@ html:has(.navdrawer.open) {
 
 /* Chat Shop Button */
 .sb.cb .btn-navdrawer {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   bottom: 144px;
   right: 11px;
@@ -238,6 +236,9 @@ html:has(.navdrawer.open) {
 
 /* Drawer */
 .sb.cb .navdrawer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -249,7 +250,6 @@ html:has(.navdrawer.open) {
   z-index: 100000;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  overflow: hidden;
   visibility: hidden;
 }
 
@@ -289,7 +289,6 @@ html:has(.navdrawer.open) {
 
 /* START */
 #dp-main {
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   transform: translateZ(0);
   will-change: scroll-position;
@@ -297,6 +296,7 @@ html:has(.navdrawer.open) {
 /* Header */
 
 .sb.cb .header-sidenav {
+  flex-shrink: 0;
   width: 100%;
   height: auto;
   padding: 24px;
@@ -304,7 +304,6 @@ html:has(.navdrawer.open) {
   overflow: hidden;
   position: sticky;
   z-index: 99999;
-  flex-shrink: 0;
   top: 0;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
@@ -379,8 +378,8 @@ html:has(.navdrawer.open) {
   gap: 16px;
   padding: 24px;
   flex: 1;
-  overflow-y: auto;
   min-height: 0;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -391,7 +390,6 @@ html:has(.navdrawer.open) {
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.1),
     0 -0.5px 8px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
 }
 
 section.content-container > ul {
@@ -460,6 +458,14 @@ svg.icon-sm {
 .sb.cb .content-invisible {
   visibility: hidden;
   pointer-events: none;
+}
+
+.sb.cb #dp-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .sb.cb #dp-overseas {
