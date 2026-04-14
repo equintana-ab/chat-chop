@@ -476,10 +476,10 @@ svg.icon-sm {
   display: none;
 }
 /* for ghost hover in iphone  */
-/* .navdrawer.is-opening .li-contacts:hover,
+.navdrawer.is-opening .li-contacts:hover,
 .navdrawer.is-opening .li-contacts:focus {
   background-color: transparent !important;
-} */
+}
 
 /* Media Queries */
 @media (min-width: 768px) {
