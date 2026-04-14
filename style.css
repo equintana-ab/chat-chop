@@ -115,6 +115,8 @@ html:has(.navdrawer.open) {
 
 /* Chat Shop Button */
 .sb.cb .btn-navdrawer {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 144px;
   right: 11px;
