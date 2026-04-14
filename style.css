@@ -484,9 +484,9 @@ svg.icon-sm {
   display: none;
 }
 /* for ghost hover in iphone  */
-.navdrawer.is-opening .li-contacts {
-  pointer-events: none !important;
-  background-color: transparent !important;
+.sb.cb .li-contacts:hover,
+.sb.cb .li-contacts:active {
+  background-color: #dadce080 !important;
 }
 .navdrawer.is-opening .li-contacts {
   pointer-events: none !important;
