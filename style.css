@@ -46,7 +46,7 @@ html:has(.navdrawer.open) {
   width: 44px;
   height: 44px;
   border: 3px solid #019bf0;
-  border-radius: 50%;
+  border-radius: 30% !important;
   animation: pulseStroke 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 }
 
@@ -121,7 +121,7 @@ html:has(.navdrawer.open) {
   z-index: 1000;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 999px;
+  border-radius: 10px !important;
   border: 2px solid #019bf0;
   background: #fff;
   box-shadow:
@@ -269,7 +269,7 @@ html:has(.navdrawer.open) {
   transform: translateX(0);
   visibility: visible;
   background-color: #3f59d9;
-  background-image: url("img/logo_Z_white.png");
+  background-image: url("https://equintana-ab.github.io/chat-chop/img/logo_Z_white.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
@@ -287,8 +287,10 @@ html:has(.navdrawer.open) {
 
 /* START */
 #dp-main {
-  overflow-y: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  will-change: scroll-position;
 }
 /* Header */
 
@@ -300,7 +302,10 @@ html:has(.navdrawer.open) {
   overflow: hidden;
   position: sticky;
   z-index: 99999;
+  flex-shrink: 0;
   top: 0;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .sb.cb .titlebar.flex-start {
@@ -371,11 +376,13 @@ html:has(.navdrawer.open) {
 .sb.cb .sidenav-display-container.flex-container {
   gap: 16px;
   padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .sb.cb .content-container {
   width: 100%;
-  padding: 10px 0px;
   background-color: white;
   border-radius: 13px;
   box-shadow:
@@ -400,11 +407,9 @@ section.content-container > ul {
   position: relative;
   height: 60px;
 }
-
 .sb.cb .li-contacts:hover {
   background-color: #dadce080;
 }
-
 .sb.cb .li-contacts .flex-container {
   align-items: flex-start;
   width: 100%;
@@ -467,7 +472,6 @@ svg.icon-sm {
 }
 
 /* Media Queries */
-
 @media (min-width: 768px) {
   .sb.cb .navdrawer {
     width: 80%;
@@ -480,9 +484,6 @@ svg.icon-sm {
     transform: translateX(100%);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-  }
-  .sb.cb .content-container {
-    padding: 10px 0px;
   }
   .eye_emoji {
     top: 43px;
