@@ -18,6 +18,11 @@ function toggleDrawer(isOpen) {
     const scrollY = window.scrollY;
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollY}px`;
+    //for ghost hover effect when opening drawer in iphone
+    drawer.classList.add("is-opening");
+    setTimeout(() => {
+      drawer.classList.remove("is-opening");
+    }, 330);
   } else {
     btnNav.classList.remove("open");
     drawer.classList.remove("open");
@@ -28,11 +33,6 @@ function toggleDrawer(isOpen) {
     document.body.style.position = "";
     document.body.style.top = "";
     window.scrollTo(0, scrollY);
-    /// for ghost hover in iphone after opening the drawer.
-    drawer.style.pointerEvents = "none";
-    setTimeout(() => {
-      drawer.style.pointerEvents = "";
-    }, 400);
   }
 }
 
