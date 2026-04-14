@@ -408,17 +408,9 @@ section.content-container > ul {
   position: relative;
   height: 60px;
 }
-/* .sb.cb .li-contacts:hover {
+.sb.cb .li-contacts:hover {
   background-color: #dadce080;
-} */
-/* @media (hover: hover) and (pointer: fine) {
-  .sb.cb .li-contacts:hover {
-    background-color: #dadce080 !important;
-  }
 }
-.sb.cb .li-contacts:active {
-  background-color: #dadce080 !important;
-} */
 .sb.cb .li-contacts .flex-container {
   align-items: flex-start;
   width: 100%;
@@ -484,12 +476,8 @@ svg.icon-sm {
   display: none;
 }
 /* for ghost hover in iphone  */
-.sb.cb .li-contacts:hover,
-.sb.cb .li-contacts:active {
-  background-color: #dadce080 !important;
-}
-.navdrawer.is-opening .li-contacts {
-  pointer-events: none !important;
+.navdrawer.is-opening .li-contacts:hover,
+.navdrawer.is-opening .li-contacts:focus {
   background-color: transparent !important;
 }
 
