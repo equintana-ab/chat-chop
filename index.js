@@ -22,7 +22,7 @@ function toggleDrawer(isOpen) {
     drawer.classList.add("is-opening");
     setTimeout(() => {
       drawer.classList.remove("is-opening");
-    }, 330);
+    }, 300);
   } else {
     btnNav.classList.remove("open");
     drawer.classList.remove("open");
